@@ -1,0 +1,121 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.App {
+  width: 550px;
+  height: 550px;
+  background-color: #0B2434;
+  padding: 35px;
+  position: relative;
+}
+.App .rolls {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.App .time {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+.App .game-container {
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 50px;
+}
+.App .game-container h1 {
+  font-weight: 700;
+  letter-spacing: -0.768px;
+  color: #2B283A;
+}
+.App .game-container .info {
+  margin: 20px;
+  letter-spacing: -0.393px;
+  font-weight: 400;
+  color: #4A4E74;
+}
+.App .game-container .start-button {
+  width: 100px;
+  min-height: 35px;
+  background-color: #00B285;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.App .game-container .Game .blocks-container {
+  height: 150px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.App .game-container .Game .blocks-container .Die {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #2B283A;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.App .game-container .Game button {
+  width: 100px;
+  min-height: 35px;
+  background-color: #5035FF;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.App .game-container .Popup {
+  width: 100%;
+  height: 100%;
+  background-color: purple;
+}
+
+:global .custom-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: purple; /* Add transparency for the background */
+  z-index: 1000; /* Adjust the z-index value if needed */
+}
+
+:global .custom-overlay {
+  /* Apply overlay styles here if needed */
+}
