@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Die from './Die'
 import Confetti from 'react-confetti';
 
-const Game = ({ setRolls, setSecond, intervalId }) => {
+const Game = ({ setRolls, intervalId }) => {
     const [blocks, setBlocks] = useState([])
     const [gameOver, setGameOver] = useState(false)
     const [btnText, setBtnText] = useState("")
@@ -62,6 +62,7 @@ const Game = ({ setRolls, setSecond, intervalId }) => {
 
     React.useEffect(() => {
         startGame()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     // check if game over
